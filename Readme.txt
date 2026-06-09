@@ -1,0 +1,3 @@
+for project view carousel customisation:
+
+The project-carousel-snippet.html file has four ready-to-use templates — plain image, gradient placeholder, video (object-fit cover, fills the card), and video with a poster image. The JS in project.js automatically detects <video> elements in each slide and plays the active one while pausing all others. Hovering the carousel pauses auto-rotation so a video can be watched. The letterbox class variant uses object-fit: contain if you need to show the full video without cropping.

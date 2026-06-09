@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project — Kelvin</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="page-entering">
+
+    <!-- TUNNEL OVERLAY (entry animation) -->
+    <div class="tunnel-overlay" id="tunnelOverlay">
+        <div class="tunnel-ring" style="--i:1"></div>
+        <div class="tunnel-ring" style="--i:2"></div>
+        <div class="tunnel-ring" style="--i:3"></div>
+        <div class="tunnel-ring" style="--i:4"></div>
+        <div class="tunnel-ring" style="--i:5"></div>
+        <div class="tunnel-flash"></div>
+    </div>
+
+    <!-- CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-back" id="navBack">
+                <span class="back-arrow">←</span>
+                <span class="mono back-label">BACK</span>
+            </a>
+            <div class="nav-logo">K<span class="logo-dot">.</span></div>
+            <div class="nav-project-id mono" id="navProjectId">PROJECT / 01</div>
+        </div>
+    </nav>
+
+    <!-- HERO CAROUSEL -->
+    <section class="project-hero">
+        <div class="carousel" id="carousel">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Slides: replace src with real images -->
+                <div class="carousel-slide">
+                    <img src="./img/SG Home page.jpg" alt="Silverguide's Home Page">
+                </div>                
+                <div class="carousel-slide">
+                    <img src="./img/SG SignIn page.jpg" alt="Silverguide's sign in panel">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/SG Register page.jpg" alt="Silverguide's registration panel">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/SG change password.jpg" alt="Silverguide's change password panel">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/SG Learn page.jpg" alt="Silverguide's Learn Page">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/SG Article View.jpg" alt="View of an article in Silver Guide">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/SG About page.jpg" alt="Silverguide's About Page">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/SG Emergency page.jpg" alt="Silverguide's Help line Page">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/SG Article Editor.jpg" alt="Silverguide's admin article editor interface">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/SG Dashboard 1.jpg" alt="Silverguide's admin dashboard">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/SG Dashboard 2.jpg" alt="Silverguide's articles management dashboard">
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous">‹</button>
+            <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next">›</button>
+
+            <!-- Dots -->
+            <div class="carousel-dots" id="carouselDots"></div>
+
+            <!-- Auto-play bar -->
+            <div class="carousel-progress-bar">
+                <div class="carousel-progress-fill" id="carouselProgressFill"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT CONTENT -->
+    <main class="project-main">
+
+        <!-- Title block -->
+        <section class="project-title-block reveal-up">
+            <div class="ptb-meta">
+                <span class="mono ptb-num" id="ptbNum">01</span>
+                <div class="ptb-tags" id="ptbTags">
+                    <span>Stable Diffusion WebUI</span>
+                    <span>Runway Gen-2</span>
+                    <span>Adobe Premiere Pro</span>
+                    <span>ElevenLabs</span>
+                    <span>Adobe Audition</span>
+                </div>
+            </div>
+            <h1 class="ptb-title" id="ptbTitle">AI Disaster Movie Trailer</h1>
+            <div class="ptb-divider"></div>
+        </section>
+
+        <!-- Overview -->
+        <section class="project-section reveal-up" style="--delay:0.1s">
+            <div class="ps-label mono">/ OVERVIEW</div>
+            <div class="ps-body">
+                <p id="projectOverview">
+                    An early experiment in AI-assisted creative direction — conceived, sourced, edited and audio-synced
+                    entirely before generative AI tooling reached mainstream polish. The project involved directing
+                    Stable Diffusion to produce consistent cinematic frames, cutting them in Adobe Premiere Pro to a
+                    disaster-movie pacing, and layering a custom audio mix in Adobe Audition to sell the genre tone.
+                </p>
+                <p>
+                    Working with early-stage tools meant solving problems that had no documentation. Prompt-to-frame
+                    consistency, temporal coherence between shots, and tone-matching audio to AI-generated visuals were
+                    all challenges navigated from first principles.
+                </p>
+            </div>
+        </section>
+
+        <!-- Details grid -->
+        <section class="project-details reveal-up" style="--delay:0.2s">
+            <div class="detail-card">
+                <span class="mono detail-label">ROLE</span>
+                <p id="detailRole">Creative Director &amp; Editor</p>
+            </div>
+            <div class="detail-card">
+                <span class="mono detail-label">TIMELINE</span>
+                <p id="detailTimeline">2023 — 3 weeks</p>
+            </div>
+            <div class="detail-card">
+                <span class="mono detail-label">STATUS</span>
+                <p id="detailStatus">Completed &amp; Published</p>
+            </div>
+            <div class="detail-card">
+                <span class="mono detail-label">PLATFORM</span>
+                <p id="detailPlatform">YouTube</p>
+            </div>
+        </section>
+
+        <!-- Challenge -->
+        <section class="project-section reveal-up" style="--delay:0.1s">
+            <div class="ps-label mono">/ THE CHALLENGE</div>
+            <div class="ps-body">
+                <p id="projectChallenge">
+                    Early Stable Diffusion models had no concept of scene continuity. Getting two consecutive frames to
+                    feel like they belonged to the same film — same lighting, same character, same world — required
+                    iterative prompt engineering and significant manual curation. The editing challenge was then to
+                    construct a coherent narrative arc from inherently discontinuous frames.
+                </p>
+            </div>
+        </section>
+
+        <!-- Outcome -->
+        <section class="project-section reveal-up" style="--delay:0.1s">
+            <div class="ps-label mono">/ OUTCOME</div>
+            <div class="ps-body">
+                <p id="projectOutcome">
+                    The trailer landed as a proof-of-concept for AI-assisted filmmaking — demonstrating that with
+                    creative direction and editing craft, early generative tools could produce results that read as
+                    intentional rather than accidental. It became a reference point for subsequent AI creative
+                    experiments.
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="project-cta reveal-up" style="--delay:0.1s">
+            <a href="https://youtu.be/28inCzQJPNM" class="btn btn--primary magnetic-btn" target="_blank" rel="noopener"
+                id="projectLink">
+                View Live Project →
+            </a>
+            <a href="index.html#projects" class="btn btn--ghost magnetic-btn" id="backToProjects">
+                ← All Projects
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="project-footer">
+        <div class="pf-inner">
+            <span class="mono pf-copy">© 2026 Kelvin.</span>
+            <div class="pf-nav">
+                <a href="#" class="pf-link mono" id="prevProject">← PREV PROJECT</a>
+                <a href="#" class="pf-link mono" id="nextProject">NEXT PROJECT →</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="project.js"></script>
+</body>
+
+</html>

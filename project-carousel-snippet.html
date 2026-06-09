@@ -1,0 +1,56 @@
+<!--
+  ============================================================
+  CAROUSEL SLIDE TEMPLATES — copy and use as needed
+  Place inside <div class="carousel-track" id="carouselTrack">
+  ============================================================
+
+  HOW TO USE:
+  - Image slide: replace the gradient background with a real <img>
+  - Video slide: drop your video file into the <video> tag
+  - Mix and match — the carousel handles both types automatically
+  - Videos autoplay (muted) when their slide is active, pause when not
+  - Add/remove slides freely — dots and progress bar update automatically
+  ============================================================
+-->
+
+<!-- ① IMAGE SLIDE (with gradient placeholder — replace with real image) -->
+<div class="carousel-slide">
+    <img src="./images/project-screenshot-1.jpg" alt="Project screenshot 1">
+</div>
+
+<!-- ② IMAGE SLIDE (gradient placeholder — use until you have screenshots) -->
+<div class="carousel-slide" style="--slide-color: linear-gradient(135deg, #ff6b35, #f7c59f);">
+    <div class="slide-placeholder">
+        <span class="mono">IMAGE 01</span>
+        <p>Replace with project screenshot</p>
+    </div>
+</div>
+
+<!-- ③ VIDEO SLIDE (muted autoplay, bounded within card, pauses when not active) -->
+<div class="carousel-slide carousel-slide--video">
+    <video
+        class="slide-video"
+        src="./vid/project-demo.mp4"
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- ④ VIDEO SLIDE with poster image (shown before video plays) -->
+<div class="carousel-slide carousel-slide--video">
+    <video
+        class="slide-video"
+        src="./vid/project-walkthrough.mp4"
+        poster="./images/video-poster.jpg"
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        Your browser does not support the video tag.
+    </video>
+</div>

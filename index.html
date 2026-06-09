@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin — Creative Technologist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- PAGE ENTRY OVERLAY -->
+    <div class="page-entry-overlay" id="pageEntryOverlay"></div>
+
+    <!-- CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">K<span class="logo-dot">.</span></a>
+
+            <!-- Center morphing zone -->
+            <div class="nav-center" id="navCenter">
+                <!-- Static nav links (default state) -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about" data-label="01" data-section="about">About</a></li>
+                    <li><a href="#projects" data-label="02" data-section="projects">Projects</a></li>
+                    <li><a href="#roadmap" data-label="03" data-section="roadmap">Roadmap</a></li>
+                    <li><a href="#contact" data-label="04" data-section="contact">Contact</a></li>
+                </ul>
+
+                <!-- Morphed progress bar (active section state) -->
+                <div class="nav-progress-pill" id="navProgressPill">
+                    <span class="npp-label mono" id="nppLabel">ABOUT</span>
+                    <div class="npp-track">
+                        <div class="npp-fill" id="nppFill"></div>
+                    </div>
+                    <span class="npp-pct mono" id="nppPct">0%</span>
+                </div>
+            </div>
+
+            <!-- Right side: dots menu -->
+            <div class="nav-right">
+                <div class="nav-dots-menu" id="navDotsMenu">
+                    <button class="nav-dots-btn" id="navDotsBtn" aria-label="Navigation menu">
+                        <span class="dots-icon">
+                            <span></span><span></span><span></span>
+                        </span>
+                        <span class="mono dots-label">MENU</span>
+                    </button>
+                    <div class="nav-dropdown" id="navDropdown">
+                        <div class="dropdown-inner">
+                            <a href="#home" class="dd-link" data-section="home"><span class="mono dd-num">00</span><span
+                                    class="dd-text">Home</span></a>
+                            <a href="#about" class="dd-link" data-section="about"><span
+                                    class="mono dd-num">01</span><span class="dd-text">About</span></a>
+                            <a href="#projects" class="dd-link" data-section="projects"><span
+                                    class="mono dd-num">02</span><span class="dd-text">Projects</span></a>
+                            <a href="#roadmap" class="dd-link" data-section="roadmap"><span
+                                    class="mono dd-num">03</span><span class="dd-text">Roadmap</span></a>
+                            <a href="#contact" class="dd-link" data-section="contact"><span
+                                    class="mono dd-num">04</span><span class="dd-text">Contact</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow hero-glow--amber"></div>
+        <div class="hero-glow hero-glow--blue"></div>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="hero-tag reveal-fade">
+                    <span class="tag-dot"></span>Available for opportunities
+                </div>
+                <h1 class="hero-name" id="heroName">KELVIN</h1>
+                <div class="hero-title-block reveal-fade" style="--delay:0.6s">
+                    <p class="hero-role">Creative Technologist</p>
+                    <p class="hero-role hero-role--secondary">Full Stack Developer</p>
+                </div>
+                <p class="hero-bio reveal-fade" style="--delay:0.8s">
+                    5+ years building businesses. Now building software.<br>
+                    I bridge the gap between <em>what works commercially</em> and <em>what's technically possible</em>.
+                </p>
+                <div class="hero-cta reveal-fade" style="--delay:1s">
+                    <a href="#projects" class="btn btn--primary magnetic-btn">View Projects</a>
+                    <a href="#contact" class="btn btn--ghost  magnetic-btn">Let's Talk</a>
+                </div>
+                <div class="hero-stats reveal-fade" style="--delay:1.2s">
+                    <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Years User-Centric
+                            Experience </span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years Entrepreneurial
+                            Logic</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Drive to Build</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right reveal-fade" style="--delay:0.4s">
+                <div class="hero-video-frame">
+                    <div class="frame-corner frame-corner--tl"></div>
+                    <div class="frame-corner frame-corner--tr"></div>
+                    <div class="frame-corner frame-corner--bl"></div>
+                    <div class="frame-corner frame-corner--br"></div>
+                    <video class="hero-video" autoplay muted loop playsinline>
+                        <source src="./vid/PortfolioVid.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label"><span class="mono">KELVIN.EXE</span><span class="rec-dot"></span></div>
+                </div>
+                <div class="hero-float-card">
+                    <span class="mono">CURRENTLY</span>
+                    <p>Graduating Full Stack Developer — Engineering high-impact web applications with a sharp focus on
+                        human-centric design</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint"><span class="mono">SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MANIFESTO — frame scrub animation -->
+    <section id="manifesto" class="manifesto">
+        <div class="manifesto-img-wrap">
+            <canvas id="manifestoCanvas"></canvas>
+            <div class="manifesto-overlay"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="section-label mono scan-trigger">/ ABOUT</div>
+        <div class="about-inner">
+            <div class="about-headline">
+                <h2 class="split-reveal">Not your<br><span class="text-amber">typical dev.</span></h2>
+                <p class="about-sub reveal-up">I've sat across the table from customers, ran an e-commerce operation,
+                    and understood P&amp;L before I wrote my first line of production code. That context changes how I
+                    build.</p>
+            </div>
+            <div class="about-cards">
+                <div class="about-card reveal-up" style="--delay:0s">
+                    <div class="card-icon">◈</div>
+                    <h3>Business-First Thinking</h3>
+                    <p>A decade in sales and customer service taught me that technology exists to solve real human
+                        problems. I don't just build features — I ask whether they matter.</p>
+                </div>
+                <div class="about-card reveal-up" style="--delay:0.12s">
+                    <div class="card-icon">◈</div>
+                    <h3>Entrepreneurial Grit</h3>
+                    <p>5+ years running an e-commerce business through real market uncertainty built resilience and
+                        commercial instinct that no bootcamp teaches.</p>
+                </div>
+                <div class="about-card reveal-up" style="--delay:0.24s">
+                    <div class="card-icon">◈</div>
+                    <h3>Technical Hunger</h3>
+                    <p>Pivoting into tech isn't a fallback — it's the convergence of everything I've done. Full stack
+                        development is my foundation for continued technical growth.</p>
+                </div>
+            </div>
+            <div class="skills-block reveal-up" style="--delay:0.1s">
+                <h3 class="mono skills-heading">// TECH STACK</h3>
+                <div class="skill-grid">
+                    <div class="skill-item"><span>HTML / CSS</span></div>
+                    <div class="skill-item"><span>Bootstrap</span></div>
+                    <div class="skill-item"><span>Java</span></div>
+                    <div class="skill-item"><span>Spring Boot</span></div>
+                    <div class="skill-item"><span>JavaScript</span></div>
+                    <div class="skill-item"><span>React</span></div>
+                    <div class="skill-item"><span>Node.js</span></div>
+                    <div class="skill-item"><span>TypeScript</span></div>
+                    <div class="skill-item"><span>MySQL</span></div>
+                    <div class="skill-item"><span>Git</span></div>
+                    <div class="skill-item"><span>Docker</span></div>
+                    <div class="skill-item"><span>Stakeholder management</span></div>
+                    <div class="skill-item"><span>Business Development</span></div>
+                    <div class="skill-item"><span>Product Management</span></div>
+                    <div class="skill-item"><span>Sales &amp; Marketing strategy</span></div>
+                    <div class="skill-item skill-item--learning"><span>AI/ML ↗</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+        <div class="section-label mono scan-trigger">/ PROJECTS</div>
+        <h2 class="section-title split-reveal">Featured Work</h2>
+        <p class="section-sub reveal-up">A mix of technical builds and creative experiments — each one a step in the
+            journey.</p>
+        <div class="projects-grid">
+
+            <article class="project-card project-card--featured reveal-up" style="--delay:0s" data-project-id="0">
+                <div class="project-gradient" style="--g1:#ff6b35;--g2:#f7c59f;"></div>
+                <div class="project-num mono">01</div>
+                <div class="project-body">
+                    <div class="project-body-left">
+                        <div class="project-tags-top">
+                            <span>HTML/CSS</span><span>JavaScript</span><span>Bootstrap</span><span>React</span><span>Git</span><span>Docker</span>
+                        </div>
+                        <h3 class="scramble-title">GS Full Stack Developer Course Capstone Project</h3>
+                        <p>A secure, full-stack React digital portal engineered to enhance digital literacy and safety
+                            for elderly users. Features a component-driven architecture with robust user authentication,
+                            interactive social engagement (likes and comment threads), an inline context-aware AI
+                            chatbot, and a comprehensive Admin Dashboard for global user, role, and content lifecycle
+                            management.</p>
+                    </div>
+                    <a href="https://silverguide.krenova.co/" target="_blank" rel="noopener noreferrer"
+                        class="project-link tunnel-link">View Project <span class="arrow">→</span></a>
+                </div>
+            </article>
+
+            <article class="project-card reveal-up" style="--delay:0.1s" data-project-id="1">
+                <div class="project-gradient" style="--g1:#667eea;--g2:#764ba2;"></div>
+                <div class="project-num mono">02</div>
+                <div class="project-body">
+                    <div class="project-tags-top"><span>Placeholder 1</span><span>Placeholder 2</span></div>
+                    <h3 class="scramble-title">Placeholder for technical project</h3>
+                    <p>Portfolio currently under construction!</p>
+                    <a href="#" class="project-link">View Project <span
+                            class="arrow">→</span></a>
+                </div>
+            </article>
+
+            <article class="project-card reveal-up" style="--delay:0.2s" data-project-id="2">
+                <div class="project-gradient" style="--g1:#4facfe;--g2:#00f2fe;"></div>
+                <div class="project-num mono">03</div>
+                <div class="project-body">
+                    <div class="project-tags-top"><span>Stable Diffusion WebUI</span><span>Runway
+                            Gen-2</span><span>Adobe Premiere Pro</span><span>ElevenLabs</span><span>Adobe
+                            Audition</span></div>
+                    <h3 class="scramble-title">AI Disaster Movie Trailer</h3>
+                    <p>Early AI experiment in creative direction — sourcing, editing, and audio sync using AI-generated
+                        visuals before the tools were mature(2023).</p>
+                    <a href="https://youtu.be/28inCzQJPNM" target="_blank" rel="noopener noreferrer"
+                        class="project-link tunnel-link">View on YouTube <span class="arrow">→</span></a>
+                </div>
+            </article>
+
+            <article class="project-card reveal-up" style="--delay:0.3s" data-project-id="3">
+                <div class="project-gradient" style="--g1:#43e97b;--g2:#38f9d7;"></div>
+                <div class="project-num mono">04</div>
+                <div class="project-body">
+                    <div class="project-tags-top"><span>Stable Diffusion WebUI</span><span>Adobe Photoshop</span></div>
+                    <h3 class="scramble-title">My first children's storybook</h3>
+                    <p>This project was a hands-on exploration of leveraging emerging AI and Large Language Model (LLM)
+                        technologies for creative content generation. My goal was to produce a complete,
+                        ready-for-market product from a single creative vision, testing the entire workflow from
+                        ideation to final publication.</p>
+                    <a href="https://www.amazon.com/Max-Borin-Friendship-Adventure-illustrated-ebook/dp/B0C9SNRFG6"
+                        target="_blank" rel="noopener noreferrer" class="project-link tunnel-link">View Project <span
+                            class="arrow">→</span></a>
+                </div>
+            </article>
+
+            <article class="project-card reveal-up" style="--delay:0.1s" data-project-id="4">
+                <div class="project-gradient" style="--g1:#c14502;--g2:#f60404;"></div>
+                <div class="project-num mono">05</div>
+                <div class="project-body">
+                    <div class="project-tags-top"><span>Placeholder 1</span><span>Placeholder 2</span></div>
+                    <h3 class="scramble-title">More coming soon...</h3>
+                    <p>Portfolio currently under construction!</p>
+                    <a href="#" class="project-link">View Project <span
+                            class="arrow">→</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap" class="roadmap">
+        <div class="section-label mono scan-trigger">/ ROADMAP</div>
+        <h2 class="section-title split-reveal">The Journey</h2>
+        <p class="section-sub reveal-up">Every step has been preparation. Here's where I've been — and where I'm headed.
+        </p>
+        <div class="timeline">
+            <div class="timeline-item timeline-item--done reveal-left">
+                <div class="tl-marker">✓</div>
+                <div class="tl-content"><span class="mono tl-period">2003 – 2017</span>
+                    <h3>Sales &amp; Customer Service</h3>
+                    <p>10+ years understanding people, building trust, and learning what customers actually need — the
+                        foundation of every great product.</p>
+                </div>
+            </div>
+            <div class="timeline-item timeline-item--done reveal-left" style="--delay:0.1s">
+                <div class="tl-marker">✓</div>
+                <div class="tl-content"><span class="mono tl-period">2020 – 2025</span>
+                    <h3>E-Commerce Entrepreneur</h3>
+                    <p>Built and ran my own online store — operations, logistics, marketing, and P&amp;L from the ground
+                        up. When the market shifted, I pivoted into building what I'd always been buying from others.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item timeline-item--active reveal-left" style="--delay:0.2s">
+                <div class="tl-marker tl-marker--pulse">→</div>
+                <div class="tl-content"><span class="mono tl-period">NOW</span>
+                    <h3>Full Stack Developer</h3>
+                    <p>Completing a full stack development course and building a real portfolio. Seeking my first
+                        developer role where business depth and technical skill compound together.</p>
+                </div>
+            </div>
+            <div class="timeline-item timeline-item--future reveal-left" style="--delay:0.3s">
+                <div class="tl-marker">◎</div>
+                <div class="tl-content"><span class="mono tl-period">NEXT</span>
+                    <h3>Senior Developer &amp; Tech Leader</h3>
+                    <p>Growing into a senior engineering role — leading projects, mentoring, and continuing to bridge
+                        business outcomes with technical execution.</p>
+                </div>
+            </div>
+            <div class="timeline-item timeline-item--future reveal-left" style="--delay:0.4s">
+                <div class="tl-marker">◎</div>
+                <div class="tl-content"><span class="mono tl-period">HORIZON</span>
+                    <h3>AI-Powered Product Builder</h3>
+                    <p>Deepening expertise in AI and machine learning to build intelligent products. The destination:
+                        creating technology that solves real problems at scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="section-label mono scan-trigger">/ CONTACT</div>
+        <div class="contact-inner">
+            <div class="contact-left reveal-up">
+                <h2>Let's build<br><span class="text-amber">something.</span></h2>
+                <p>Whether you're looking for a developer who understands business, a collaborator on something
+                    ambitious, or just want to talk shop — I'm here for it.</p>
+                <div class="contact-links">
+                    <a href="mailto: subingrongkelvin@gmail.com" class="contact-link magnetic-btn"><span
+                            class="mono">EMAIL</span> subingrongkelvin@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/kelvin-su-59332515a/" class="contact-link magnetic-btn"><span
+                            class="mono">LINKEDIN</span>linkedin.com/in/kelvin-su-59332515a/</a>
+                    <a href="https://github.com/KelvinSu1983" class="contact-link magnetic-btn"><span
+                            class="mono">GITHUB</span>github.com/KelvinSu1983</a>
+                </div>
+            </div>
+            <div class="contact-right reveal-up" style="--delay:0.15s">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <textarea placeholder="Setting up API for this. Please use my provided email meanwhile..." rows="5" required></textarea>
+                    <button type="submit" class="btn btn--primary btn--full magnetic-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="nav-logo">K<span class="logo-dot">.</span></span>
+            <p class="mono footer-copy">© 2026 Kelvin. Creative Technologist.</p>
+            <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+        </div>
+    </footer>
+
+    <!-- TUNNEL EXIT OVERLAY -->
+    <div class="tunnel-exit-overlay" id="tunnelExitOverlay">
+        <div class="tunnel-ring" style="--i:1"></div>
+        <div class="tunnel-ring" style="--i:2"></div>
+        <div class="tunnel-ring" style="--i:3"></div>
+        <div class="tunnel-ring" style="--i:4"></div>
+        <div class="tunnel-ring" style="--i:5"></div>
+        <div class="tunnel-flash"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
